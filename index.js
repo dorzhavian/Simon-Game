@@ -1,6 +1,13 @@
 var buttonColors = ["red", "green", "yellow", "blue"];
 var gamePattren = [];
 
+var userClickedPattern = [];
+
+$(".btn").click(function() {
+  var userChosenColour = $(this).attr("id");
+  userClickedPattern.push(userChosenColour);
+});
+
 function nextSequence() {
     var randomChosenNum = Math.floor(Math.random() * 6) + 1
     var randomChosenColor = buttonColors[randomChosenNum];
